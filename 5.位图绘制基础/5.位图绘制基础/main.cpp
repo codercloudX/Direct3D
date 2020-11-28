@@ -8,7 +8,7 @@
 //---------------------------------------------------//
 #define WINDOW_WIDTH 1000
 #define WINDOW_HEIGHT 800
-#define WINDOW_TITLE "GDI程序核心框架"//窗口标题定义的宏
+#define WINDOW_TITLE "位图绘制基础"//窗口标题定义的宏
 
 //-------------【全局变量声明部分】-------------------//
 //描述：全局变量声明
@@ -50,14 +50,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPreinstance, LPSTR lpCmdLine,
 		L"pClassName",//lpClassName，指向类名称的指针
 		L"happy world",//lpWindowName，指向窗口名称的指针
 		WS_CAPTION | WS_MINIMIZEBOX | WS_SYSMENU | WS_SIZEBOX,//dwStyle，窗口风格
-		200, 200, 640, 800,//分别为：窗口的水平位置，窗口的垂直位置，窗口的宽度，窗口的高度
+		200, 200, 1640, 800,//分别为：窗口的水平位置，窗口的垂直位置，窗口的宽度，窗口的高度
 		NULL,//hWndParent,父窗口的句柄
 		NULL,//hMenu,菜单的句柄或是子窗口的标识符
 		hInstance,//应用程序实例的句柄
 		NULL//指向窗口的创建数据
 		);
 
-	MoveWindow(hWnd, 200, 50, 800, 600, true);
+	MoveWindow(hWnd, 200, 50, WINDOW_WIDTH, WINDOW_HEIGHT, true);
 	ShowWindow(hWnd, nCmdShow);
 	UpdateWindow(hWnd);
 

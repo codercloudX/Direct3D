@@ -1,0 +1,5 @@
+上传：
+git init 
+git add .//添加到仓库
+git commit -m "注释语句"//提交到仓库
+git remote add origin https://github.com/hanhailong/CustomRatingBar //关联远程仓库

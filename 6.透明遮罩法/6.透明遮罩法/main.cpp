@@ -117,8 +117,8 @@ bool Game_Init(HWND hWnd){
 
 	//----------------------【位图绘制1.加载位图】------------------------//
 	g_hBackGroud = (HBITMAP)LoadImage(NULL,L"bk.bmp",IMAGE_BITMAP,1000,600,LR_LOADFROMFILE);
-	g_hSprite[0] = (HBITMAP)LoadImage(NULL, L"s2.bmp", IMAGE_BITMAP,640 ,579 , LR_LOADFROMFILE);
-	g_hSprite[1] = (HBITMAP)LoadImage(NULL, L"s2.bmp", IMAGE_BITMAP, 800, 584, LR_LOADFROMFILE);
+	g_hSprite[0] = (HBITMAP)LoadImage(NULL, L"s1.bmp", IMAGE_BITMAP, 200, 200, LR_LOADFROMFILE);//在这里对图片进行缩放
+	g_hSprite[1] = (HBITMAP)LoadImage(NULL, L"s2.bmp", IMAGE_BITMAP, 200, 200, LR_LOADFROMFILE);
 
 	//----------------------【位图绘制2.建立兼容DC】------------------------//
 	g_mdc = CreateCompatibleDC(g_hdc);
@@ -132,12 +132,19 @@ void Game_Paint(HWND hWnd){
 	SelectObject(g_mdc,g_hBackGroud);
 	BitBlt(g_hdc, 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT, g_mdc, 0, 0, SRCCOPY);
 
-	//绘制精灵图s1
+	////绘制精灵图s1
 	SelectObject(g_mdc, g_hSprite[0]);
-	//BitBlt(g_hdc, 0, 0, 500, 600, g_mdc, 0, 0, SRCCOPY);
+	//BitBlt(g_hdc, 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT, g_mdc, 0, 0, SRCCOPY);
 	BitBlt(g_hdc, 50, WINDOW_HEIGHT - 579, 320, 640, g_mdc, 320, 0, SRCAND);//屏蔽图与背景图做and运算
 	BitBlt(g_hdc, 50, WINDOW_HEIGHT - 579, 320, 640, g_mdc, 0, 0, SRCPAINT);//前景图与背景图做or运算
+
+	//绘制精灵图s2
+	SelectObject(g_mdc, g_hSprite[1]);
+	BitBlt(g_hdc, 450, WINDOW_HEIGHT - 584, 400, 584, g_mdc, 320, 0, SRCAND);//屏蔽图与背景图做and运算
+	BitBlt(g_hdc, 450, WINDOW_HEIGHT - 584, 400, 584, g_mdc, 0, 0, SRCPAINT);//前景图与背景图做or运算
 }
+
+
 
 bool Game_CleanUp(HWND hWnd){
 	//DeleteObject(g_hBitmap);

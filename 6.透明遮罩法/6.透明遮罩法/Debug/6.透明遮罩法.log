@@ -1,4 +1,4 @@
-﻿生成启动时间为 2020/11/16 23:13:17。
+﻿生成启动时间为 2020/11/22 20:15:30。
      1>项目“E:\c++工作区\c++_Win32学习\6.透明遮罩法\6.透明遮罩法\6.透明遮罩法.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          D:\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
@@ -10,4 +10,4 @@
 
 生成成功。
 
-已用时间 00:00:01.30
+已用时间 00:00:05.86
