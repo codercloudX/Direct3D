@@ -3,11 +3,12 @@ git init
 git add .//添加到仓库
 git commit -m "注释语句"//提交到仓库
 git remote add origin https://github.com/hanhailong/CustomRatingBar //关联远程仓库
+git push -u origin main//提交代码
 
 创建新库并上传：
 git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/codercloudX/python.git
-git push -u origin main
+git add .//添加到仓库
+git commit -m "first commit"//提交到仓库
+git branch -M main//创建分支
+git remote add origin https://github.com/codercloudX/python.git//关联远程仓库
+git push -u origin main//提交代码
