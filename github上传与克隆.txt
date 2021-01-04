@@ -10,5 +10,11 @@ git init
 git add .//添加到仓库
 git commit -m "first commit"//提交到仓库
 git branch -M main//创建分支
-git remote add origin https://github.com/codercloudX/python.git//关联远程仓库
+git remote add origin https://github.com/codercloudX/python.git//关联远程仓库,这里也给仓库起了别名
 git push -u origin main//提交代码
+
+切换分支：
+git checkout
+
+拉取代码并合并：
+git pull origin(仓库的别名) master(分支名) 
